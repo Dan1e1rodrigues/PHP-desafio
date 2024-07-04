@@ -13,9 +13,9 @@
                 <?php 
                     $numero = $_GET["numero"] ?? 0;
                     $dollar = "5,56";
-                    $resultado = ($numero/$dollar); 
+                    $resulted = ($numero/$dollar); 
 
-                    echo "Seus equivalem $numero equivalem a US$ $resultado";
+                    echo "Seus equivalem $numero equivalem a US$ $resulted";
                 ?>
             </p>
             <!-- Botão redirecionando para index.html -->

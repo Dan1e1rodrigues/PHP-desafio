@@ -11,7 +11,7 @@
         <h1>Conversor de Moedas</h1>
         <form action="conversor.php" method="GET">
             <label for="num">Quantos Reais você tem na carteira</label>
-            <input type="number" name="numero" required>
+            <input type="number" name="numero" step="0.01" required>
             <button type="submit">Converter</button>
         </form>
     </div>
