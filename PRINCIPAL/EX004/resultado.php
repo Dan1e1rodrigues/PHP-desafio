@@ -13,12 +13,14 @@
             <p>
                 <?php 
                     $numero = $_GET["numero"] ?? 0;
-                    $numInteiro = intval($numero);
-                    $numFracionario = floatval($numero);
+
+                    // Parte logica
+                    $numInteiro = (int) $numero;
+                    $numFracionario = $numero - $numInteiro;
 
                     echo "<br> Analisando o número $numero informado pelo usuário: ";
-                    echo "<br>A parte inteira do número é  $numInteiro \n";
-                    echo "<br>A parte fracionaria do número é $numFracionario \n";
+                    echo "<br>A parte inteira do número é  <strong>$numInteiro<strong/> \n ";
+                    echo "<br>A parte fracionaria do número é <strong>$numFracionario<strong/> \n";
                 ?>
             </p>
             <!-- Botão redirecionando para index.html -->
