@@ -8,9 +8,19 @@
 </head>
 <body>
     <main>
-        <div class="container">
-            <h1>Conversor de Moedas</h1>
-        </div>
+        
+        <pre class="container">
+            <?php 
+                echo "<h2>SuperGlobias GET</h2>";
+                var_dump($_GET);
+
+                echo "<h2>SuperGlobias POST</h2>";
+                var_dump($_POST);
+
+                echo "<h2>SuperGlobais REQUEST</h2>";
+                var_dump($_REQUEST);
+            ?>
+        </pre>
     </main>
 
 </body>
