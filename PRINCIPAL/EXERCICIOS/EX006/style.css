@@ -1,0 +1,49 @@
+/* Estilização geral do corpo */
+body {
+    background-color: #0e71d3; /* Fundo azul claro */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilização da área principal */
+main {
+    background-color: #ffffff; /* Fundo branco para a caixa de texto */
+    padding: 20px;
+    border-radius: 10px; /* Caixa de texto arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Estilização dos labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Estilização dos inputs */
+input[type="number"],
+input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="button"] {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="button"]:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
