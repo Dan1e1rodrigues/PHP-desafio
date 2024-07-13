@@ -8,12 +8,9 @@
 </head>
 <body>
     <?php 
-        //Capturando o número do formulario
-        // $valor1 = $_GET['v1'] ?? 0;
-        // $valor2 = $_GET['v2'] ?? 0;
-
-        $valor1 = 87;
-        $valor2 = 10;
+        // Capturando o número do formulario P/ Divisão
+        $valor1 = $_GET['v1'] ?? 0;
+        $valor2 = $_GET['v2'] ?? 0;
     ?>
     <main>
         <h1>Somador de valores</h1>
@@ -31,8 +28,9 @@
     <section id="resultado">
         <h2>Resultado da Soma</h2>
         <?php 
-            $soma = $valor1 + $valor2;
-            print "<p>A soma entre $valor1 é $valor2 é igual a $soma    </p>";
+            $divi = $valor1 + $valor2;
+            print "<p>A divisão entre $valor1 é $valor2 é igual a $divi</p>";
+            print "<p>Resto da divisão ?</p>";
         ?>
     </section>
 </body>
