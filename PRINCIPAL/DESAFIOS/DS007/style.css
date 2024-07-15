@@ -1,0 +1,112 @@
+/* Estilização geral do corpo */
+body {
+    background-color: #1b1fe9; /* Fundo azul claro */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilização do contêiner principal */
+.container {
+    display: flex;
+    flex-direction: column; /* Coloca as caixas uma embaixo da outra */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+/* Estilização da área principal */
+main, #resultado {
+    background-color: #ffffff;
+    padding: 23px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 509px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.fundo{
+    background-color: #d6d4d4;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Estilização dos labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.edicao{
+    background-color: rgb(178 178 178);
+    color: black;
+    font-size: 14px;
+    width: 90px;
+    border-radius: 6%;
+}
+
+.edicaoT{
+    font-size: 21px;
+    padding: 10px;
+    font-family: monospace;
+}
+
+/* Estilização da tabela */
+table {
+    width: 50%;
+    border-collapse: collapse; /* Remove espaços entre as células */
+    background-color: #ffffff; /* Fundo branco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
+    text-align: center; /* Centraliza o texto nas células */
+}
+
+/* Estilização das células da tabela */
+td {
+    padding: 20px;
+    border: 1px solid #ddd; /* Bordas finas para as células */
+    font-size: 1.2em;
+}
+
+/* Estilização das linhas da tabela */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cor de fundo diferente para linhas pares */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* Cor de fundo diferente para linhas ímpares */
+}
+
+/* Estilização dos inputs */
+input[type="number"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #2bc12b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #68d268; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilização do resultado */
+#resultado {
+    text-align: left;
+}
