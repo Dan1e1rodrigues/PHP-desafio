@@ -9,7 +9,7 @@
 <body>
 
     <?php 
-        $valorRaiz = $_GET['raiz'] ?? 0;
+        $valorRaiz = $_GET['raiz'] ?? 1;
 
         $raizQuadrada = sqrt($valorRaiz);
 
@@ -27,11 +27,6 @@
 
                     <input type="number" name="raiz" id="raiz" value="<?= $valorRaiz ?>" step="0.01">
 
-                    <!-- <p class="edicaoT">Considerando o salário mínimo de R$
-                        <?= number_format($salarioMinimo, 2, "," , ".") ?>,
-                        você ganha <?= $divisao ?> salários mínimos + R$ <?= number_format($resto, 2, "," , ".") ?>.
-                    </p> -->
-
                     <input type="submit" value="Calcular Raízes">
                 </form>
             </div>
@@ -42,8 +37,10 @@
 
             <?php 
                 echo "</br>Analisando o <strong>número $valorRaiz </strong>, temos:";
-                echo "</br>A sua raiz quadrada é <strong> $raizQuadrada </strong>";
-                echo "<br>A sua raiz cúbica é <strong> $raizCubica</strong>";
+                echo "</br>A sua raiz quadrada é <strong> " . number_format($raizQuadrada, 2,
+                    ",", "."). "</strong>";
+                echo "</br>A sua raiz cúbica é <strong>" . number_format($raizCubica, 2,
+                    ",", "."). "</strong>";
             ?>            
         </div>
     </div>
