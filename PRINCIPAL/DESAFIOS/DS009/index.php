@@ -13,6 +13,30 @@
         $valorP1 = $_GET['v2'] ?? 1;
         $valorV2 = $_GET['v3'] ?? 1;
         $valorP2 = $_GET['v4'] ?? 1;
+
+        // Media aritmedicas Simples
+        $valores = array($valorV1, $valorV2);
+
+        $soma = array_sum($valores);
+
+        $numeroElementos = count($valores);
+
+        $media = $soma / $numeroElementos;
+        //media aritmedicas Ponderada.
+        $pesos = array($valorP1, $valorP2);
+
+        // Inicialize as variáveis para a soma ponderada e a soma dos pesos
+        $somaPonderada = 0;
+        $somaPesos = 0;
+
+        // Calcule a soma ponderada e a soma dos pesos
+        for ($i = 0; $i < count($valores); $i++) {
+            $somaPonderada += $valores[$i] * $pesos[$i];
+            $somaPesos += $pesos[$i];
+        }
+
+        // Calcule a média ponderada
+        $mediaPonderada = $somaPonderada / $somaPesos;
     ?>
 
     <div class="container">
@@ -57,15 +81,16 @@
             <h2>Cálculo das Médias</h2>
 
             <?php 
-                echo "</br>Analisando o <strong>número $valorV1";
-                echo "</br>Analisando o <strong>número $valorP1";
-                echo "</br>Analisando o <strong>número $valorV2";
-                echo "</br>Analisando o <strong>número $valorP2";
-            //     echo "</br>A sua raiz quadrada é <strong> " . number_format($raizQuadrada, 2,
-            //         ",", "."). "</strong>";
-            //     echo "</br>A sua raiz cúbica é <strong>" . number_format($raizCubica, 2,
-            //         ",", "."). "</strong>";
-            // ?>            
+                echo"Analisando os valores $valorV1 e $valorV2";
+
+                echo "</br>A <strong> Média Aritmédica Simples </strong> entre
+                os valores é igual a $media";
+
+                echo "</br>A <strong>Média Aritmédica Ponderada </strong> 
+                com pesos $valorP1 e $valorP2 é igual a " . number_format($mediaPonderada, 2,
+                    ",", "."). "";
+                
+                 ?>            
         </div>
     </div>
 </body>
