@@ -88,7 +88,7 @@
 
                 echo "</br>A <strong>Média Aritmédica Ponderada </strong> 
                 com pesos $valorP1 e $valorP2 é igual a " . number_format($mediaPonderada, 2,
-                    ",", "."). "";
+                    ".", "."). "";
                 
                  ?>            
         </div>
