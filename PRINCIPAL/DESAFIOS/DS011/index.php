@@ -61,5 +61,6 @@
             document.getElementById('p').innerText = document.getElementById('reaj').value;
         }
     </script>
+    
 </body>
 </html>
