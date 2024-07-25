@@ -34,6 +34,10 @@ main, #resultado {
     border-radius: 10px;
 }
 
+img.nota{
+    height: 40px;
+}
+
 .textCo{
     color: white;
 }

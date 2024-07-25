@@ -9,22 +9,21 @@
 <body>
 
     <?php    
-        $total = $_GET['v1'] ?? 0;
-        $sobra = $total;
+        $saque = $_GET['saque'] ?? 0;
+
+        $resto = $saque;
+	
+        $tot100 = floor($resto / 100);
+        $resto %= 100;
         
-        $semana = (int)($sobra / 604_800);
-        $sobra = $sobra % 604_800;
+        $tot50 = floor($resto / 50);
+        $resto %= 50;
         
-        $dia = (int)($sobra / 86_400);
-        $sobra = $sobra % 86_400;
+        $tot10 = floor($resto / 10);
+        $resto %= 10;
         
-        $hora = (int)($sobra / 3_600);
-        $sobra = $sobra % 3_600;
-        
-        $minuto = (int)($sobra / 60);
-        $sobra = $sobra % 60;
-        
-        $segundo = $sobra;
+        $tot5 = floor($resto / 5);
+        $resto %= 5;
     ?>
 
     <div class="container">
@@ -32,29 +31,28 @@
             <h1>Caixa Eletrônico</h1>
             <div class="fundo">
                 <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
-                    <!-- 1° Primeiro valor -->
                     <div class="edicao">
-                        <label for="seg">Qual valor você deseja sacar?(R$)*</label>
+                        <label for="saque">Qual valor você deseja sacar?(R$)<sup>*</sup></label>
                     </div>
 
-                        <input type="number" name="v1" id="v1" min="0" step="1" required>
-                        <p class="textCo">* Notas disponiveis: R$100, R$50, R$10 e R$5</p>
+                        <input type="number" name="saque" id="saque" step="5" required>
+                        <p class="textCo"><sup>*</sup> Notas disponiveis: R$100, R$50, R$10 e R$5</p>
 
-                    <input type="submit" value="Sacar">
+                        <input type="submit" value="Sacar">
                 </form>
             </div>
         </main>
 
         <div id="resultado">
-            <h2>Saque de R$0, 00 realizado</h2>
+            <h2>Saque de R$ <?= $saque ?> realizado</h2>
             
-            <p>O caixa eletrônico vai te entregar as seguintes Notas:</p>
+            <p>O caixa eletrônico vai te entregar as 
+                seguintes Notas:</p>
             <ul>
-                <li>x0</li>
-                <li>x1</li>
-                <li>x2</li>
-                <li>x3</li>
-                <li>x4</li>
+                <li><img src="./imagens/100-reais.jpg" alt="nota de 100" class="nota">  X <?= $tot100 ?></li>
+                <li><img src="./imagens/50-reais.jpg" alt="nota de 50" class="nota">  X <?= $tot50 ?></li>
+                <li><img src="./imagens/10-reais.jpg" alt="nota de 10" class="nota">  X <?= $tot10 ?></li>
+                <li><img src="./imagens/5-reais.jpg" alt="nota de 5" class="nota">  X <?= $tot5 ?></li>
             </ul>
         </div>
     </div>
